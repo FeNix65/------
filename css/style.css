@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+}
+ul, button{
+    padding: 0;
+}
+
+
+/* header */
+.header{
+    height: 100px;
+    box-shadow: 4px 1px 4px;
+}
