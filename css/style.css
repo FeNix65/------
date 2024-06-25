@@ -18,6 +18,11 @@
     src: url('/fonts/Montserrat-SemiBold.ttf');
     font-weight: 600;
 }
+
+.btn,.about__list-btn,.how__list-frst-btn,.how__list-scnd-btn{
+    border-radius: 16px;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -40,10 +45,27 @@ a{
     
 }
 
-.btn:hover,.btn:focus,.btn-evklid:hover,.btn-evklid:focus,.about__list-btn:hover,.about__list-btn:focus{
+.btn:hover,.btn-evklid:hover{
     background-color: #FF9900;
     color: #fff;
-    border-color:#FF9900;
+    border-color:#FF9900; 
+}
+
+.btn:focus{
+    outline: solid #FF9900 ;
+    background-color: #FF9900;
+
+}
+
+.about__list-btn:hover{
+    background-color: #FF9900;
+    color: #fff;
+
+}
+
+.btn-evklid:focus,.about__list-btn:focus{
+    outline: solid #FF9900 ;
+    background-color: #FF9900;
 }
 
 .btn:active,.btn-evklid:active,.about__list-btn:active{
@@ -71,8 +93,8 @@ a{
     margin-bottom: 100px;
 }
 
-/* header */
 
+/* header */
 .header{
     display: flex;
     height: 100px;
@@ -97,108 +119,137 @@ a{
 }
 .header__nav__container{
     display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     background-color: white;
     border-radius: 16px;
     box-shadow: 0px 0px 20px 0px;
     height: 60px;
     width: 539px;
     position: fixed;
-    top: 120px;
-    right: 555px;
+    top: 20px;
+    right: 40px;
     z-index: 10;
-    /* display: none; */
+    display: none;
+}
+.header__container__search{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #DCDCDC;
+    width: 412px;
+    height: 24px;
+    font-family: 'MontserratSemiBold';
+    font-size: 18px;
+    color: #ADADAD;
 }
 
+
 .header__link:hover{
-    border-bottom: 1px solid #FF9900;
+    
+    text-decoration: underline solid #FF9900;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 46px;
 }
 
 .header__link:active{
-    border-bottom: 1px solid #E1670E;
+    
     color: #E1670E;
+    text-decoration: underline solid #E1670E;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 46px;
 }
 
 .header__link:focus{
-   outline: 1px solid #E1670E;
-
+    outline: 1px solid #E1670E;
     color: black;
 }
 
 
 /* hero */
+
+/* Секция "Герой" */
 .hero{
-    width: 1770px;
+    width: 1770px;/* Устанавливает ширину секции "Герой" в 1770 пикселей */
 }
 
+/* Заголовок секции "Герой" */
 .hero__title {
-    font-weight: 800;
-    font-size: 70px;
-    width: 837px;
-    margin-top: -70px;
-    margin-bottom: 35px;
+    font-weight: 800;/* Устанавливает вес шрифта заголовка в 800 (очень жирный*/
+    font-size: 70px;/* Устанавливает размер шрифта заголовка в 70 пикселей */
+    width: 837px;/* Устанавливает ширину заголовка в 837 пикселей */
+    margin-top: -70px; /* Устанавливает верхний отступ заголовка в -70 пикселей (накладывает на предыдущий элемент) */
+    margin-bottom: 35px;/* Устанавливает нижний отступ заголовка в 35 пикселей */
 }
 
-.hero__description {
-    font-weight: 600;
-    width: 790px;
-    font-size: 24px;
-    margin-top: 0;
+/* Карусель */
+.carousel {
+border-radius: 32px; /* Устанавливает радиус закругления карусели в 32 пикселя */
 }
 
- .carousel {
-border-radius: 32px; 
-}
-
+/* Изображение в карусели */
 .carousel-item-img {
-border-radius: 32px; 
-
+border-radius: 32px; /* Устанавливает радиус закругления изображения карусели в 32 пикселя */
 }
 
+
+/* Текст карусели */
 .carousel-caption{
-   display: flex;
-   flex-direction: column;
-   right: 0;
-   left: 0;
-   text-align: start;
-   height: 408px;
-   padding: 0;
-   margin-left: 80px;
+   display: flex; /* Включает flexbox для позиционирования элементов */
+   flex-direction: column;/* Устанавливает направление flexbox в колонку */
+   right: 0; /* Устанавливает правый отступ текста карусели в 0 пикселей */
+    left: 0; /* Устанавливает левый отступ текста карусели в 0 пикселей */
+    text-align: start; /* Выравнивает текст карусели по левому краю */
+    height: 408px; /* Устанавливает высоту текста карусели в 408 пикселей */
+    padding: 0; /* Устанавливает внутренний отступ текста карусели в 0 пикселей */
+    margin-left: 80px; /* Устанавливает левый отступ текста карусели в 80 пикселей */
 }
 
+/* Кнопка секции "Герой" */
 .hero__btn{
-    width: 280px;
-    height: 78px;
-    font-size: 23px;
-    font-weight: bold;
+    width: 280px; /* Устанавливает ширину кнопки в 280 пикселей */
+    height: 78px; /* Устанавливает высоту кнопки в 78 пикселей */
+    font-size: 23px; /* Устанавливает размер шрифта кнопки в 23 пикселя */
+    font-weight: bold; /* Устанавливает вес шрифта кнопки в bold (жирный) */
 }
 
+
+/* Описание секции "Герой"*/
 .hero__description {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 85px;
+    font-size: 24px; /* Устанавливает размер шрифта описания в 24 пикселя */
+    font-weight: bold; /* Устанавливает вес шрифта описания в bold (жирный) */
+    margin-bottom: 85px; /* Устанавливает нижний отступ описания в 85 пикселей */
+    font-weight: 600; /* Устанавливает вес шрифта описания в 600 (полужирный) */
+    width: 790px; /* Устанавливает ширину описания в 790 пикселей */
+    margin-top: 0; /* Устанавливает верхний отступ описания в 0 пикселей */
 }
 
+
+/* Не последний элемент текста карусели */
 .carousel-caption:not(:last-child){
-    display: flex;
-    justify-content: ;
+    display: flex; /* Включает flexbox для позиционирования элементов */
 }
 
+
+/* Контейнер слайдов карусели */
 .carousel-inner{
-    display: flex;
+    display: flex; /* Включает flexbox для позиционирования элементов */
 }
 
+/* Индикатор слайда */
 .indicator-dot {
-    width: 10px;
-    height: 10px;
-    background-color: #fff;
-    border-radius: 50%;
-    display: inline-block;
-    margin-left: 1000px;
-}
-.carousel-indicators [data-bs-target]{
-    box-sizing: border-box;
+    width: 10px; /* Устанавливает ширину индикатора в 10 пикселей */
+    height: 10px; /* Устанавливает высоту индикатора в 10 пикселей */
+    background-color: #fff; /* Устанавливает цвет фона индикатора в белый */
+    border-radius: 50%; /* Устанавливает радиус закругления индикатора в 50% (круглый) */
+    display: inline-block; /* Выставляет индикатор как блочный элемент */
+    margin-left: 1000px; /* Устанавливает левый отступ индикатора в 1000 пикселей */
 }
 
+/* Кнопка индикатора слайда */
+.carousel-indicators [data-bs-target]{
+    box-sizing: border-box;/* Устанавливает модель размеров в border-box */
+}
+                
 
 /* about */
 
@@ -245,6 +296,7 @@ border-radius: 32px;
     justify-content: space-around;
     background-color: rgba(0, 0, 0, 0.66);
     font-weight: bold;
+    border-radius: 32px;
 }
  
 .about__list__items:first-child{
@@ -253,6 +305,7 @@ border-radius: 32px;
     background-size: cover;
     display: flex;
     align-items: end;
+    border-radius: 32px;
 }
 
 .about__sublist{
@@ -262,6 +315,7 @@ border-radius: 32px;
     align-items: center;
     border: 1px solid;
     border-color: #CACACA;
+    border-radius: 32px;
 }
 
 .about__list-btn{
@@ -318,7 +372,7 @@ border-radius: 32px;
     color: #333333;
 }
 .how__items-steps__links:nth-child(1){
-    /* color: #E1670E; */
+    color: #E1670E;
 }
 
 .how__items-steps__links:active{
@@ -326,7 +380,7 @@ border-radius: 32px;
 }
 
 .how__items-steps__links:focus{
-    border: #FF9900 1px solid;
+    outline: #FF9900  solid;
 }
 
 .how__items-steps{
@@ -344,6 +398,7 @@ border-radius: 32px;
 .how__items-img{
     width: 870px;
     height: 460px;
+    border-radius: 32px;
 }
 .how__items__container{
     display: flex;
@@ -364,14 +419,43 @@ border-radius: 32px;
     max-width: 354px;
 }
 .how__list-frst-btn{
+    border: 1px solid #FF9900;
     height: 60px;
     width: 175px;
 }
+
+.how__list-frst-btn:hover {
+
+}
+
 .how__list-scnd-btn{
     height: 60px;
     width: 147px;
     background-color: white;
+    border: 1px solid #333333;
+    color: #333333;
 }
+
+.how__list-scnd-btn:hover{
+    background-color: #666666;
+    color: #FFFFFF;
+ 
+}
+
+.how__list-scnd-btn:active{
+    background-color: #000000;
+    color: #FFFFFF;
+ 
+}
+
+.how__list-scnd-btn:focus{
+    background-color: #666666;
+    color: #FFFFFF;
+    outline: #666666;
+ 
+}
+
+
 
 
 /* question */
@@ -389,18 +473,37 @@ border-radius: 32px;
 }
 
 .question__list-items {
+    border-bottom: 1px solid #CACACA;
+    color: #000000;
+    fill: #ECECEC;
+}
+.question__list-items path {
+    fill: #666666;
+}
+.question__items__container{
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid #CACACA;
     height: 112px;
     align-items: center;
 }
-
+.question__items-description{
+    font-family: 'MontserratRegular';
+    width: 1003px;
+    line-height: 32px;
+    font-weight: 400;
+}
 .question__list-items:first-child {
     border-top: 1px solid #CACACA;
 
 }
 
+.question__list-items:hover{
+    color: #FF9900;
+    stroke: #FFFFFF;
+    fill: #FF9900;
+    border-top: 1px solid #FF9900;
+    border-bottom: 1px solid #FF9900;
+}
 
 /* footer */
 .footer {
@@ -431,6 +534,9 @@ border-radius: 32px;
 
 .footer__list-item:nth-child(3) {
     margin-left: 220px;
+    /* padding-top: 150px; */
+    display: flex;
+    justify-content: center;
 }
 
 .footer__list-item{
@@ -449,11 +555,37 @@ border-radius: 32px;
 
 .footer__subitem {
     color: #CACACA;
+    font-size: 18px;
+    font-weight: 600;
+}
 
+.footer__sublist-icons {
+    width: 230px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__icon {
+    fill: #7C7C7C
+}
+
+.footer__icon:hover {
+    fill: #FF9900;
+}
+
+.footer__icon:focus {
+    fill: #666666;
+    outline: none;
+    outline: #FF9900 1px solid;
+}
+
+.footer__icon:active {
+    fill: #E1670E;
+    
 }
 
 .footer__list-img {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .footer__list-description {
@@ -473,23 +605,45 @@ border-radius: 32px;
 
 .footer__list-title {
     color: #CACACA;
+    margin-bottom: 30px;
 }
 
-.footer__form-item:not(:last-child) {
+.footer__form-item:not(:nth-child(3)) {
     height: 60px;
 
 }
-.footer__form-item:last-child {
-    height: 150px;
+
+.footer__form-item:not(:nth-child(4)):hover, .footer__form-item:not(:nth-child(4)):focus, .footer__form-item:not(:nth-child(4)):active {
+    background: #666666;
+    outline: none;
 }
+
+.footer__form-item:not(:nth-child(4)):active {
+    color: white;
+}
+
+.footer__form-item:nth-child(3) {
+    height: 150px; 
+}
+
+textarea:focus, input:focus {
+    color: #fff;
+}
+
+.footer__form-btn-psition {
+    width: 565px;
+    display: flex;
+    justify-content: center;
+}
+
 .footer__form-item {
     background-color: #414141;
     border-color: #414141;
     border-radius: 16px;
     padding-left: 20px;
-    
-    
 }
+
+
 .footer__form-btn {
     width: 269px;
     height: 58px;
